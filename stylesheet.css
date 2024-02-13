@@ -9,7 +9,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(8px);
     display: flex;
     height: 100vh;
     justify-content: center;
