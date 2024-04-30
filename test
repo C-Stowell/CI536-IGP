@@ -1,113 +1,69 @@
-package ci583.receiver;
+package ci583.test;
 
 /**
- * A class representing a process for the CI583 Modules Registration assignment. Process is a subclass of Thread.
- * When the thread runs, the 'work' that it does is to sleep repeatedly.
+ * Tests for the CI583 Registration assignment. When your code passes these tests you can be
+ * fairly confident it is along the right lines, but passing the tests does not imply that
+ * your code is perfect.
  *
- *
+ * @author Jim Burton
  */
-public class ModuleRegister extends Thread {
-    /** The amount of 'work' this process has to do, in milliseconds. */
-    private long work;
-    /** The time at which this process was started, in milliseconds. */
-    private long timeStarted;
-    /** Contains the name and other details of this process. */
-    private String status;
 
-    /** An enum containing three priority values, LOW, MEDIUM and HIGH.
-     *
-     */
-    public enum PRIORITY {
-        HIGH(1), MED(5), LOW(9);
+import ci583.receiver.*;
+import org.junit.Before;
+import org.junit.Test;
 
-        private int val;
 
-        PRIORITY(int val) {
-            this.val = val;
-        }
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
-        public int getVal() {
-            return val;
-        }
+import static org.junit.Assert.assertEquals;
+
+public class TestModRegistrations {
+    @Before
+    public void setUp() throws Exception {
     }
 
-    /**
-     * Constructs a new Process with the given name and amount of work to do.
-     * @param pid
-     * @param work
-     */
-    public ModuleRegister(String pid, long work) {
-        this(pid, work, PRIORITY.MED);
+    @Test
+    public void testRRReceiver() {
+        ModRegReceiver r = new RRReceiver(100);
+        r.enqueue(new ModuleRegister("P1", 5000));
+        r.enqueue(new ModuleRegister("P2", 3000));
+        r.enqueue(new ModuleRegister("P3", 1000));
+        r.enqueue(new ModuleRegister("P4", 4000));
+
+        Stream<String> names = r.startRegistration().stream().map(ModuleRegister::getName);
+        assertEquals("[P3, P2, P4, P1]", Arrays.toString(names.toArray()));
+
     }
 
-    /**
-     * Constructs a new Process with the given name, amount of work to do and priority.
-     * @param pid
-     * @param work
-     * @param p
-     */
-    public ModuleRegister(String pid, long work, PRIORITY p) {
-        this.setName(pid);
-        this.work = work;
-        timeStarted = System.currentTimeMillis();
-        setPriority(p.getVal());
-        status = String.format("[%s %d] INCOMPLETE %d", pid, getPriority(), work);
+    @Test
+    public void testPReceiver() {
+        ModRegReceiver r = new PReceiver(100);
+        r.enqueue(new ModuleRegister("P1", 2000, ModuleRegister.PRIORITY.MED));
+        r.enqueue(new ModuleRegister("P2", 3000, ModuleRegister.PRIORITY.LOW));
+        r.enqueue(new ModuleRegister("P3", 4000, ModuleRegister.PRIORITY.MED));
+        r.enqueue(new ModuleRegister("P4", 4000, ModuleRegister.PRIORITY.HIGH));
+        r.enqueue(new ModuleRegister("P5", 4000, ModuleRegister.PRIORITY.LOW));
+        r.enqueue(new ModuleRegister("P6", 4000, ModuleRegister.PRIORITY.HIGH));
+
+        Stream<String> names = r.startRegistration().stream().map(ModuleRegister::getName);
+        assertEquals("[P6, P4, P3, P1, P2, P5]", Arrays.toString(names.toArray()));
     }
 
-    /**
-     * The run method sleeps repeatedly until the 'work' is done.
-     */
-    public void run() {
-        while(workDone() < work) {
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException ignored) { }
-        }
-        setStatus();
+    @Test
+    public void doMLFQScheduler() {
+        ModRegReceiver r = new MLFQReceiver(100);
+        r.enqueue(new ModuleRegister("P1", 2000));
+        r.enqueue(new ModuleRegister("P2", 3000));
+        r.enqueue(new ModuleRegister("P3", 4000));
+        r.enqueue(new ModuleRegister("P4", 4000));
+        r.enqueue(new ModuleRegister("P5", 4000));
+        r.enqueue(new ModuleRegister("P6", 4000));
+
+        Stream<String> names = r.startRegistration().stream().map(ModuleRegister::getName);
+        assertEquals("[P1, P2, P4, P5, P6, P3]", Arrays.toString(names.toArray()));
     }
-
-    /**
-     * Sets a string describing this process and how long it took to complete.
-     */
-    private void setStatus() {
-        status = String.format("[%s %d] COMPLETE: %d/%d",
-                getName(), getPriority(), work, workDone());
-    }
-
-    public long getWork() {
-        return work;
-    }
-
-
-
-
-    /**
-     * Getter for status.
-     * @returns status of the process
-     */
-    public String getStatus() {
-        throw new UnsupportedOperationException("Method not implemented");
-    }
-    //return status;
-
-    /**
-     * The length of time, in milliseconds, that this process has been working.
-     * @return
-     */
-    public long workDone() {
-      return System.currentTimeMillis() - timeStarted;
-    }
-
-    /**
-     * Returns the contents of `status'.
-     * @return
-     */
-    public String toString() {
-        return status;
-    }
-
-
-
 }
 
 
