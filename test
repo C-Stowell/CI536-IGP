@@ -1,1 +1,110 @@
-https://wordlecup.io/?code=7447d2
+package ci583.receiver;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MLFQReceiver extends ModRegReceiver {
+    private List<ModuleRegister> youngProcesses;
+    private List<ModuleRegister> oldProcesses;
+
+    private long quantum;
+
+    /**
+     * Constructs a multi-level feedback queue receiver. The constructor needs to call the constructor of the
+     * superclass then initialise the two lists for young and old processes.
+     *
+     * @param quantum
+     */
+    public MLFQReceiver(long quantum) {
+        super(quantum);
+        youngProcesses = new ArrayList<>();
+        oldProcesses = new ArrayList<>();
+    }
+
+    /**
+     * Adds a new process to the list of young processes.
+     *
+     * @param m
+     */
+    @Override
+    public void enqueue(ModuleRegister m) {
+        youngProcesses.add(m);
+    }
+
+    /**
+     * Schedule the module registration processes. This method needs to:
+     * + create an empty list which will hold the completed processes. This will be the
+     * return value of the method.
+     * + while one of the queues is not empty:
+     * - if the list of YOUNG processes is not empty, take the next process and get its State.
+     * - if the state is NEW, start the process then sleep for QUANTUM milliseconds
+     * then put the process at the back of the list of OLD processes.
+     * - if the state is TERMINATED, add it to the results list.
+     * - if the state is anything else then interrupt the process to wake it up then
+     * sleep for QUANTUM milliseconds, then put the process at the back of the queue.
+     * <p>
+     * - if the list of YOUNG processes is empty, do the same except take the process from the
+     * list of OLD processes and, after it does its 'work' put it at the end of the list of
+     * YOUNG processes.
+     * + when both lists are empty, return the list of completed processes.
+     *
+     * @return
+     */
+    @Override
+    public List<ModuleRegister> startRegistration() {
+        List<ModuleRegister> results = new ArrayList<>();
+        List<ModuleRegister> startedProcesses = new ArrayList<>(); // Keep track of processes in the order they were started
+
+        while (!youngProcesses.isEmpty() || !oldProcesses.isEmpty()) {
+            if (!youngProcesses.isEmpty()) {
+                ModuleRegister process = youngProcesses.remove(0);
+                Thread.State state = process.getState();
+                if (state == Thread.State.NEW) {
+                    process.start();
+                    startedProcesses.add(process); // Add the started process to the tracking list
+                    try {
+                        Thread.sleep(quantum); // Sleep for quantum milliseconds
+                    } catch (InterruptedException ignored) {
+                        // Handle interruption if needed
+                    }
+                    oldProcesses.add(process);
+                } else if (state == Thread.State.TERMINATED) {
+                    results.add(process);
+                } else {
+                    oldProcesses.add(process);
+                }
+            } else if (!oldProcesses.isEmpty()) { // Handle old processes when young processes list is empty
+                ModuleRegister process = oldProcesses.remove(0);
+                Thread.State state = process.getState();
+                if (state == Thread.State.NEW) {
+                    process.start();
+                    startedProcesses.add(process); // Add the started process to the tracking list
+                    try {
+                        Thread.sleep(quantum); // Sleep for quantum milliseconds
+                    } catch (InterruptedException ignored) {
+                        // Handle interruption if needed
+                    }
+                    youngProcesses.add(process);
+                } else if (state == Thread.State.TERMINATED) {
+                    results.add(process);
+                } else {
+                    youngProcesses.add(process);
+                }
+            }
+        }
+
+        // Add the processes to the results list in the order they were started
+        for (ModuleRegister process : startedProcesses) {
+            if (results.contains(process)) {
+                continue; // Skip processes that are already added to the results list
+            }
+            results.add(process);
+
+        }
+        System.out.println(results);
+        return results;
+    }
+
+}
+
+
