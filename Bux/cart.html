@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <section class="hero">
+        <h1>Bux</h1>
+        <p>Discover a wide range of products from top sellers.</p>
+      </section>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="#">Sellers</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="cart">
+      <h1>Your Cart</h1>
+      <ul class="cart-items">
+        <!-- Cart items will be rendered here -->
+      </ul>
+      <div class="cart-total">
+        <p>Total: $0.00</p>
+        <button>Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 BUX</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCartFromLocalStorage();
+      renderCart();
+    });
+    
+  </script>
+ <script src="cart.js"></script>
+  </body>
+</html>
