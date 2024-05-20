@@ -1,61 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seller Profile</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Categories</a></li>
-        <li><a href="cart.html">Cart</a></li>
-      </ul>
-    </nav>
-  </header>
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sellerId = urlParams.get('sellerId');
 
-  <main>
-    <section class="seller-profile">
-      <h1 id="seller-name">Seller Name</h1>
-      <p id="seller-description">Seller description goes here.</p>
+  if (sellerId) {
+    loadSellerProfile(sellerId);
+  }
 
-      <div class="rating">
-        <span>Rate this seller:</span>
-        <div class="stars" data-seller="">
-          <span data-value="1">&#9733;</span>
-          <span data-value="2">&#9733;</span>
-          <span data-value="3">&#9733;</span>
-          <span data-value="4">&#9733;</span>
-          <span data-value="5">&#9733;</span>
-        </div>
-        <div class="average-rating" id="rating">Average Rating: 0</div>
-      </div>
+  const modal = document.getElementById("messageModal");
+  const span = document.getElementsByClassName("close")[0];
+  const messageSellerButton = document.getElementById('messageSellerButton');
 
-      <button onclick="messageSeller()">Message Seller</button>
-    </section>
-  </main>
+  span.onclick = () => {
+    modal.style.display = "none";
+  };
 
-  <footer>
-    <p>&copy; 2023 BUX</p>
-  </footer>
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 
-  <!-- Message Modal -->
-  <div id="messageModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Message Seller</h2>
-      <form id="messageForm">
-        <input type="hidden" id="sellerId" name="sellerId">
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
+  messageSellerButton.onclick = () => {
+    const sellerId = document.querySelector('.stars').getAttribute('data-seller');
+    document.getElementById('sellerId').value = sellerId;
+    modal.style.display = "block";
+  };
 
-  <script src="script.js"></script>
-</body>
-</html>
+  document.getElementById('messageForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Message sent!');
+    modal.style.display = "none";
+  });
+
+  document.querySelectorAll('.stars span').forEach(star => {
+    star.addEventListener('click', (e) => {
+      const value = parseInt(e.target.getAttribute('data-value'));
+      const seller = e.target.parentElement.getAttribute('data-seller');
+      saveRating(seller, value);
+    });
+  });
+});
+
+function loadSellerProfile(sellerId) {
+  // Dummy data for example, replace with actual data fetching logic
+  const sellerData = {
+    seller1: {
+      name: 'Seller 1',
+      description: 'Specializes in electronics and gadgets.',
+      rating: [5, 4, 4, 5]
+    },
+    // Add more sellers as needed
+  };
+
+  const seller = sellerData[sellerId];
+  if (seller) {
+    document.getElementById('seller-name').textContent = seller.name;
+    document.getElementById('seller-description').textContent = seller.description;
+    document.querySelector('.stars').setAttribute('data-seller', sellerId);
+    updateAverageRating(sellerId, seller.rating);
+  }
+}
+
+function saveRating(seller, value) {
+  let ratings = JSON.parse(localStorage.getItem('ratings')) || {};
+  if (!ratings[seller]) {
+    ratings[seller] = [];
+  }
+  ratings[seller].push(value);
+  localStorage.setItem('ratings', JSON.stringify(ratings));
+  updateAverageRating(seller, ratings[seller]);
+}
+
+function updateAverageRating(seller, ratings) {
+  const avg = (ratings.reduce((acc, val) => acc + val, 0) / ratings.length).toFixed(1);
+  document.getElementById('rating').textContent = `Average Rating: ${avg}`;
+}
