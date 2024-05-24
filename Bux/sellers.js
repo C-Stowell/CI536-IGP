@@ -6,49 +6,57 @@ document.addEventListener('DOMContentLoaded', () => {
     loadSellerProfile(sellerId);
   }
 
-  const modal = document.getElementById("messageModal");
-  const span = document.getElementsByClassName("close")[0];
   const messageSellerButton = document.getElementById('messageSellerButton');
+  const chatSection = document.getElementById('chatSection');
+  const chatInput = document.getElementById('chatInput');
+  const sendMessageButton = document.getElementById('sendMessageButton');
+  const chatMessages = document.getElementById('chatMessages');
 
-  span.onclick = () => {
-    modal.style.display = "none";
-  };
+  if (messageSellerButton) {
+    messageSellerButton.onclick = () => {
+      chatSection.style.display = "flex";
+    };
+  }
 
-  window.onclick = (event) => {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
+  if (sendMessageButton) {
+    sendMessageButton.onclick = () => {
+      const message = chatInput.value.trim();
+      if (message) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('chat-message');
+        messageElement.textContent = message;
+        chatMessages.appendChild(messageElement);
+        chatInput.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    };
+  }
 
-  messageSellerButton.onclick = () => {
-    const sellerId = document.querySelector('.stars').getAttribute('data-seller');
-    document.getElementById('sellerId').value = sellerId;
-    modal.style.display = "block";
-  };
-
-  document.getElementById('messageForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Message sent!');
-    modal.style.display = "none";
-  });
-
-  document.querySelectorAll('.stars span').forEach(star => {
-    star.addEventListener('click', (e) => {
-      const value = parseInt(e.target.getAttribute('data-value'));
-      const seller = e.target.parentElement.getAttribute('data-seller');
-      saveRating(seller, value);
+  const stars = document.querySelectorAll('.stars span');
+  if (stars) {
+    stars.forEach(star => {
+      star.addEventListener('click', (e) => {
+        const value = parseInt(e.target.getAttribute('data-value'));
+        const seller = e.target.parentElement.getAttribute('data-seller');
+        saveRating(seller, value);
+      });
     });
-  });
+  }
 });
 
 function loadSellerProfile(sellerId) {
-  // Dummy data for example, replace with actual data fetching logic
   const sellerData = {
     seller1: {
       name: 'Seller 1',
-      description: 'Specializes in electronics and gadgets.',
+      description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
+
+      seller2: {
+        name: 'Seller 2',
+        description: 'Person selling tablet',
+        rating: [5, 4, 4, 5]
+      },
     // Add more sellers as needed
   };
 
@@ -74,4 +82,13 @@ function saveRating(seller, value) {
 function updateAverageRating(seller, ratings) {
   const avg = (ratings.reduce((acc, val) => acc + val, 0) / ratings.length).toFixed(1);
   document.getElementById('rating').textContent = `Average Rating: ${avg}`;
+}
+
+function search() {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  
+  // Implement your search logic here
+  
+  // Example: Redirect to search results page with query string
+  window.location.href = `search-results.html?q=${encodeURIComponent(searchInput)}`;
 }
