@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Profile</title>
+  <link rel="stylesheet" href="sellers.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero">
+    <h1>Bux</h1>
+    <p>Discover a wide range of products from top sellers.</p>
+  </section>
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><input type="text" id="searchInput" placeholder="Search..."></li>
+      </ul>
+      <form id="searchForm" class="search-form">
+        <input type="text" id="searchInput" placeholder="Search for items or sellers...">
+        <button type="submit">Search</button>
+      </form>
+      <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const query = document.getElementById('searchInput').value.trim();
+          if (query) {
+            window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+          }
+        });
+      </script>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section class="seller-profile">
+      <h1 id="seller-name">Seller Name</h1>
+      <p id="seller-description">Seller description goes here.</p>
+
+
+
+      <div class="rating">
+        <span>Rate this seller:</span>
+        <div class="stars" data-seller="">
+          <span data-value="1">&#9733;</span>
+          <span data-value="2">&#9733;</span>
+          <span data-value="3">&#9733;</span>
+          <span data-value="4">&#9733;</span>
+          <span data-value="5">&#9733;</span>
+        </div>
+        <div class="average-rating" id="rating">Average Rating: 0</div>
+      </div>
+
+      <button id="messageSellerButton">Message Seller</button>
+
+      <!-- Chat section -->
+      <div id="chatSection" class="chat-section">
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Type your message...">
+          <button id="sendMessageButton">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 BUX</p>
+  </footer>
+
+  <script src="sellers.js"></script>
+  <script src="search.js"></script>
+  
+
+</body>
+</html>
+

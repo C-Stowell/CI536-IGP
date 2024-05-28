@@ -75,3 +75,39 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Load the cart data from local storage when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  loadCartFromLocalStorage();
+  renderCart();
+
+  // Get references to the product items
+  const productItems = document.querySelectorAll('.product');
+
+  // Add event listeners to the "Add to Cart" buttons
+  productItems.forEach(product => {
+      const button = product.querySelector('button');
+      button.addEventListener('click', () => {
+          const name = product.querySelector('h3').textContent;
+          const price = parseFloat(product.querySelector('p').textContent.replace('$', ''));
+          const image = product.querySelector('img').src;
+          addToCart({ name, price, image });
+      });
+  });
+
+  // Add event listener to the search form
+  const searchForm = document.getElementById('searchForm');
+  if (searchForm) {
+      searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          search();
+      });
+  }
+});
+
+// Search function to redirect to search-results.html with the query string
+function search() {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  // Redirect to search results page with query string
+  window.location.href = `search-results.html?q=${encodeURIComponent(searchInput)}`;
+}

@@ -1,0 +1,115 @@
+/* Chat section */
+  .chat-section {
+    display: none;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    border-radius: 10px;
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .chat-message {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .chat-input {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #555;
+  }
+  
+  /* Seller Profile */
+  .seller-profile {
+    padding: 50px 20px;
+    background-color: rgba(52, 58, 64, 0.9);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seller-profile h1, .seller-profile p {
+    margin-bottom: 20px;
+  }
+  
+  .seller-profile .rating {
+    margin-top: 20px;
+  }
+  
+  .seller-profile .stars {
+    display: flex;
+  }
+  
+  .seller-profile .stars span {
+    cursor: pointer;
+    font-size: 24px;
+    color: gold;
+  }
+  
+  .seller-profile .average-rating {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .seller-profile button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .seller-profile button:hover {
+    background-color: #555;
+  }
+  
+  nav ul li input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  nav ul li input[type="text"]:focus {
+    outline: none;
+  }
+  
+  
+    
