@@ -22,6 +22,20 @@
           <li><a href="cart.html">Cart </a></li>
           <li><img src = "basket_icon.png" class = "basket_icon"></li>
         </ul>
+        <form id="searchForm" class="search-form">
+          <input type="text" id="searchInput" placeholder="Search for items or sellers...">
+          <button type="submit">Search</button>
+        </form>
+        <script>
+          document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+              window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+            }
+          });
+        </script>
+        
       </nav>
     </header>
     <section class="products">
@@ -129,6 +143,7 @@
   </footer>
   <script src="script.js"></script>
   <script src="cart.js"></script>
+  <script src="search.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Get references to the product items

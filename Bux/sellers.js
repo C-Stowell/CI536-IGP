@@ -113,11 +113,6 @@ function appendMessageToChat(message) {
   chatMessages.appendChild(messageElement);
 }
 
-// Search functionality (example implementation)
-function search() {
-  const searchInput = document.getElementById('searchInput').value.toLowerCase();
-  // Implement your search logic here
-  // Example: Redirect to search results page with query string
-  window.location.href = `search-results.html?q=${encodeURIComponent(searchInput)}`;
-}
+
+
 
