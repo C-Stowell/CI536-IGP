@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("pexels-hertwashere-3224151.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
