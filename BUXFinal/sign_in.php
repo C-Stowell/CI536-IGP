@@ -63,11 +63,12 @@ $conn->close();
         </div>
     </div>
 </header>
-<nav>
-    <a href="create_account.php">Create Account</a>
-    <a href="sign_in.php">Sign In</a>
+<nav class="button-nav">
+    <a href="create_account.php" class="button">Create Account</a>
+    <a href="sign_in.php" class="button">Sign In</a>
 </nav>
 <main>
+    <h1>Sign into your account below</h1>
     <form method="POST" action="sign_in.php">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
