@@ -64,6 +64,7 @@ $conn->close();
 </nav>
 
 <main>
+    <h1>Create an account below</h1>
     <form method="POST" action="create_account.php">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
