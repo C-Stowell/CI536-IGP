@@ -1,0 +1,157 @@
+[28-May-2024 21:55:59 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 11
+[28-May-2024 21:56:32 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:56:33 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:56:34 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:40 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:41 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 21:57:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 22:01:58 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 22:01:59 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 22:02:40 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jp1487_jp1487'@'localhost' (using password: YES) in /home/jp1487/public_html/BUX/index.php on line 9
+[28-May-2024 22:04:46 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/jp1487/public_html/BUX/index.php on line 42
+[28-May-2024 22:04:47 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/jp1487/public_html/BUX/index.php on line 42
+[29-May-2024 04:57:42 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/jp1487/public_html/BUX/buy.php:120
+Stack trace:
+#0 /home/jp1487/public_html/BUX/buy.php(120): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /home/jp1487/public_html/BUX/buy.php on line 120
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:44 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:49 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:52 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:27:55 UTC] PHP Warning:  Undefined array key "product_id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:52 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[29-May-2024 05:29:56 UTC] PHP Warning:  Undefined array key "id" in /home/jp1487/public_html/BUX/buy.php on line 108
+[30-May-2024 05:04:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/jp1487/public_html/BUX/create_account.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/jp1487/public_html/BUX/create_account.php on line 24
+[30-May-2024 05:06:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/jp1487/public_html/BUX/create_account.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/jp1487/public_html/BUX/create_account.php on line 24
+[30-May-2024 05:20:36 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/jp1487/public_html/BUX/buy.php on line 72
+[30-May-2024 05:20:37 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/jp1487/public_html/BUX/buy.php on line 72
+[30-May-2024 05:20:46 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/jp1487/public_html/BUX/buy.php on line 72
+[30-May-2024 14:45:16 UTC] PHP Warning:  Undefined array key "price" in /home/jp1487/public_html/BUX/purchase.php on line 34

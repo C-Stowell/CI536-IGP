@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-image: url('../images/campus.jpg'); /* URL to your image */
+    background-size: cover; /* Cover the entire header with the image */
+    background-position: center; /* Center the image */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Align items vertically */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.logo {
+    padding: 10px; /* Adjust padding for spacing */
+}
+
+.slogan {
+    background-color: #8d66d2; /* Secondary color */
+    color: white;
+    padding: 10px 20px; /* Adjust padding */
+    margin-top: 10px; /* Add margin */
+    border-radius: 5px; /* Add border radius */
+}
+
+.button-container {
+    display: flex;
+    margin-top: 20px; /* Add margin */
+}
+
+.header-button {
+    padding: 1rem 2rem; /* Increase button padding */
+    font-size: 1.2em; /* Increase button font size */
+    background-color: #8d66d2; /* Secondary color */
+    color: white;
+    border: 2px solid #60328f; /* Add border around the button */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 5px; /* Add border radius */
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.header-button:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+
+.header-button:hover {
+    background-color: #60328f; /* Darker shade of main color on hover */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+button {
+    padding: 1rem 2rem; /* Increase button padding */
+    font-size: 1em; /* Adjust font size */
+    background-color: #8d66d2; /* Secondary color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 5px; /* Add border radius */
+}
+
+button:hover {
+    background-color: #60328f; /* Darker shade of main color on hover */
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.products .product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.2s;
+}
+
+.products .product:hover {
+    transform: scale(1.05);
+}
+
+.products .product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.products .product h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.products .product p {
+    margin: 10px 0;
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 40px; /* Place the button 40px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* No border */
+  outline: none; /* No outline */
+  background-color: #60328f; /* Main color */
+  color: white; /* Text color */
+  cursor: pointer; /* Cursor style on hover */
+  padding: 15px 20px; /* Padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+}
+
+#backToTopBtn:hover {
+  background-color: #8d66d2; /* Darker shade on hover */
+}
+
+.button-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #8d66d2;
+    border-radius: 5px;
+    border: 2px solid #60328f;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background-color: #60328f;
+    border-color: #8d66d2;
+}
