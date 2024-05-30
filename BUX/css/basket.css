@@ -1,0 +1,42 @@
+/* basket.css */
+
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body background color */
+body {
+    background-color: #ffffff; /* Light background color */
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+/* Header styles */
+header {
+    background-color: #60328f; /* Header background color */
+    padding: 10px; /* Padding around header content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points from navigation */
+}
+
+nav ul li {
+    display: inline; /* Display navigation links inline */
+    margin-right: 20px; /* Add spacing between navigation links */
+}
+
+nav ul li a {
+    color: #ffffff; /* Navigation link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Basket styles */
+.basket {
+    margin: 20px; /* Add margin around basket content */
+}
+
+.basket p {
+    margin-bottom: 10px; /* Add spacing between basket items */
+}
