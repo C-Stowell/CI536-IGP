@@ -53,52 +53,52 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadSellerProfile(sellerId) {
   const sellerData = {
     seller1: {
-      name: 'Seller 1',
-      description: 'Person selling book',
+      name: 'John Doe',
+      description: 'A computer science major selling his gently used textbooks.',
       rating: [5, 4, 4, 5]
     },
     seller2: {
-      name: 'Seller 2',
-      description: 'Person selling tablet',
+      name: 'Jane Smith',
+      description: 'Jane is an avid reader studying literature and enjoys sharing her favorite books.',
       rating: [5, 4, 4, 5]
     },
     seller3: {
-      name: 'Seller 3',
+      name: 'May Johnson',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller4: {
-      name: 'Seller 4',
+      name: 'Michael Brown',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller5: {
-      name: 'Seller 5',
+      name: 'Sarah Davis',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller6: {
-      name: 'Seller 6',
+      name: 'Robert Miller',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller7: {
-      name: 'Seller 7',
+      name: 'Linda Wilson',
       description: 'Person selling tablet',
       rating: [5, 4, 4, 5]
     },
     seller8: {
-      name: 'Seller 8',
+      name: 'James Taylor',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller9: {
-      name: 'Seller 9',
+      name: 'Patricia Moore',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
     seller10: {
-      name: 'Seller 10',
+      name: 'William Anderson',
       description: 'Person selling book',
       rating: [5, 4, 4, 5]
     },
