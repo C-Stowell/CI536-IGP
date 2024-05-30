@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profilestylesheet.css">
+</head>
+<body>
+<header>
+    <h1>Profile Page</h1>
+</header>
+
+<main>
+    <div class="form-container">
+        <div class="form profile-form">
+            <h2>Edit Profile</h2>
+            <form id="profileForm">
+                <label for="profile-name">Full Name:</label>
+                <input type="text" id="profile-name" name="name" required>
+                
+                <label for="profile-description">Description:</label>
+                <textarea id="profile-description" name="description" required></textarea>
+                
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 BUX. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('profileForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Profile updated successfully!');
+    });
+</script>
+</body>
+</html>

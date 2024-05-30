@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Creation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profilestylesheet.css">
+</head>
+<body>
+    <section class="hero">
+        <h1>Bux</h1>
+        <p>Create your profile to start using Brighton University Exchange.</p>
+    </section>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile-creation.html">Profile</a></li>
+            </ul>
+            <form id="searchForm" class="search-form">
+                <input type="text" id="searchInput" placeholder="Search for items or sellers...">
+                <button type="submit">Search</button>
+            </form>
+            <script>
+                document.getElementById('searchForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const query = document.getElementById('searchInput').value.trim();
+                    if (query) {
+                        window.location.href = `searchresults.html?q=${encodeURIComponent(query)}`;
+                    }
+                });
+            </script>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <div class="form login-form">
+                <h2>Login</h2>
+                <form id="loginForm" method="post">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                    
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="form register-form">
+                <h2>Register</h2>
+                <form id="registerForm" method="post">
+                    <label for="register-name">Full Name:</label>
+                    <input type="text" id="register-name" name="name" required>
+                    
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    
+                    <label for="register-confirm-password">Confirm Password:</label>
+                    <input type="password" id="register-confirm-password" name="confirm_password" required>
+                    
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BUX. All rights reserved.</p>
+    </footer>
+    <script src="profilejs.js"></script>
+</body>
+</html>

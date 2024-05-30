@@ -92,4 +92,10 @@ function loadCartFromLocalStorage() {
   });
 
   total = storedTotal;
+  renderCart();
 }
+
+// Load cart data on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  loadCartFromLocalStorage();
+});

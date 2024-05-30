@@ -62,7 +62,46 @@ function loadSellerProfile(sellerId) {
       description: 'Person selling tablet',
       rating: [5, 4, 4, 5]
     },
-    // Add more sellers as needed
+    seller3: {
+      name: 'Seller 3',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller4: {
+      name: 'Seller 4',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller5: {
+      name: 'Seller 5',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller6: {
+      name: 'Seller 6',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller7: {
+      name: 'Seller 7',
+      description: 'Person selling tablet',
+      rating: [5, 4, 4, 5]
+    },
+    seller8: {
+      name: 'Seller 8',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller9: {
+      name: 'Seller 9',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
+    seller10: {
+      name: 'Seller 10',
+      description: 'Person selling book',
+      rating: [5, 4, 4, 5]
+    },
   };
 
   const seller = sellerData[sellerId];

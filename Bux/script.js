@@ -111,3 +111,67 @@ function search() {
   // Redirect to search results page with query string
   window.location.href = `search-results.html?q=${encodeURIComponent(searchInput)}`;
 }
+
+//Products
+document.addEventListener('DOMContentLoaded', () => {
+  const books = [
+    { title: "Book 1", img: "book1.jpg", price: 10.99, seller: "Seller 1", sellerLink: "sellers.html?sellerId=seller1" },
+    { title: "Book 2", img: "book2.jpg", price: 12.99 },
+    { title: "Book 3", img: "book3.jpg", price: 15.99 }
+  ];
+  const tech = [
+    { title: "Tech 1", img: "tech1.jpg", price: 299.99 },
+    { title: "Tech 2", img: "tech2.jpg", price: 399.99 },
+    { title: "Tech 3", img: "tech3.jpg", price: 499.99 }
+  ];
+  const clothing = [
+    { title: "Clothing 1", img: "clothing1.jpg", price: 25.99 },
+    { title: "Clothing 2", img: "clothing2.jpg", price: 35.99 },
+    { title: "Clothing 3", img: "clothing3.jpg", price: 45.99 }
+  ];
+  const accessories = [
+    { title: "Accessory 1", img: "accessory1.jpg", price: 5.99 },
+    { title: "Accessory 2", img: "accessory2.jpg", price: 7.99 },
+    { title: "Accessory 3", img: "accessory3.jpg", price: 9.99 }
+  ];
+
+  function populateCategory(category, items) {
+    const categoryList = document.querySelector(`#${category} .product-list`);
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'product';
+      li.innerHTML = `
+        <img src="${item.img}" alt="${item.title}">
+        <h3>${item.title}</h3>
+        <p>$${item.price.toFixed(2)}</p>
+        ${item.seller ? `<p>Seller: <a href="${item.sellerLink}">${item.seller}</a></p>` : ''}
+        <button>Add to Cart</button>
+      `;
+      categoryList.appendChild(li);
+
+      li.querySelector('button').addEventListener('click', () => {
+        addToCart(item);
+      });
+    });
+  }
+
+  populateCategory('books', books);
+  populateCategory('tech', tech);
+  populateCategory('clothing', clothing);
+  populateCategory('accessories', accessories);
+});
+
+function addToCart(item) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${item.title} has been added to the cart.`);
+}
+
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const query = document.getElementById('searchInput').value.trim();
+  if (query) {
+    window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+  }
+});
